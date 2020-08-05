@@ -5,9 +5,9 @@ import styles from './Header.module.scss';
 const Header = () => {
 
     return (
-        <header>
-            <Navbar bg="dark">
-                <Navbar.Brand href="#home">
+        <header className="container-fluid px-0 bg-light">
+            <Navbar className="container d-flex justify-content-between" bg="light">
+                <Navbar.Brand className="z-line" href="#home">
                     <img
                         src="/logo.svg"
                         width="190"
