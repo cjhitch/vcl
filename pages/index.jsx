@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Lines from '../components/lines/Lines'
 import Header from '../components/header/Header'
+import Hero from '../components/hero/Hero'
 import styles from '../styles/Home.module.css'
 
 const Home = () => {
@@ -14,10 +15,7 @@ const Home = () => {
 
 			<Lines />
 			<Header />
-			<main className={styles.main}>
-				<h1>
-					index page
-				</h1>
+			<main className={`bg-light ${styles.main}`}>
 			</main>
 
 			<footer className={styles.footer}>
