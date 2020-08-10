@@ -2,5 +2,15 @@
     height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
+    background-image: url('AdobeStock_325360625_Preview.jpeg');
+    background-size: cover;
+    background-position: center;
     align-items: center;
+    .div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+
+    }
 }

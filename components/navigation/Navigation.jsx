@@ -3,26 +3,27 @@ import styles from './Navigation.module.scss'
 
 const Navigation = () => {
 
+    const links = [
+        ['/home', 'Home'], 
+        ['#', 'Web & Graphics'], 
+        ['#', 'SEO & Marketing'], 
+        ['#', 'Recent Work'], 
+        ['#', 'About'], 
+        ['#', 'Contact']
+    ]
+
+    const template = links.map( (link, index) => 
+        <Nav.Item as="li" className="z-line">
+            {index === 0 ?
+                <Nav.Link href={link[0]}>{link[1]}</Nav.Link> :
+                <Nav.Link eventKey={`link-${index}`} href={link[0]}>{link[1]}</Nav.Link>
+            }
+        </Nav.Item>
+    )
+
     return (
         <Nav defaultActiveKey="/home" as="ul">
-            <Nav.Item as="li" className="z-line">
-                <Nav.Link href="/home">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item as="li" className="z-line">
-                <Nav.Link eventKey="link-1">Web & Graphics</Nav.Link>
-            </Nav.Item>
-            <Nav.Item as="li" className="z-line">
-                <Nav.Link eventKey="link-2">SEO & Marketing</Nav.Link>
-            </Nav.Item>
-            <Nav.Item as="li" className="z-line">
-                <Nav.Link eventKey="link-3">Recent Work</Nav.Link>
-            </Nav.Item>
-            <Nav.Item as="li" className="z-line">
-                <Nav.Link eventKey="link-4">About</Nav.Link>
-            </Nav.Item>
-            <Nav.Item as="li" className="z-line">
-                <Nav.Link eventKey="link-5">Contact</Nav.Link>
-            </Nav.Item>
+            {template}
         </Nav>
     )
 }

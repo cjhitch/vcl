@@ -1,14 +1,15 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Navigation from '../navigation/Navigation'
 import Hero from '../hero/Hero'
-import BgVideo from '../bgVideo/BgVideo'
+// import BgVideo from '../bgVideo/BgVideo'
 import styles from './Header.module.scss';
 
 const Header = () => {
 
     return (
         <header className={`container-fluid px-0 bg-light ${styles.header}`}>
-            <BgVideo />
+            {/* <BgVideo /> */}
+            <div className={styles.div}></div>
             <Navbar sticky="top" className="container d-flex justify-content-between bg-transparent" variant="dark">
                 <Navbar.Brand className="z-line" href="#home">
                     <img
@@ -21,7 +22,7 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navigation />
             </Navbar>
-            <Hero title="Web & Graphics Re-imagined" tag="We focus on building your brand, so you can focus on your business"/>
+            <Hero title="Where Creativity Meets Technology" tag="We focus on building your brand, so you can focus on your business"/>
         </header>
     )
 }
