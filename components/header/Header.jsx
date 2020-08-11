@@ -22,7 +22,7 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navigation />
             </Navbar>
-            <Hero title="Where Creativity Meets Technology" tag="We focus on building your brand, so you can focus on your business"/>
+            <Hero title="Where Creativity Meets Technology" tag="Let us build your brand, so you can build your business"/>
         </header>
     )
 }
